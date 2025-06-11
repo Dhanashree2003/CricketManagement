@@ -33,7 +33,8 @@ export class SearchplayerComponent implements OnInit {
           this.notFound = false;
         },
         (error) => {
-         console.error('Player not found:', error); 
+         console.error('Player not found:', error);
+         alert("player not found for this Id"); 
         }
       );
     });

@@ -10,7 +10,6 @@ export class PlayerService {
   
 
   private baseUrl = 'http://localhost:8080/api/players/';
-  //private baseUrl = 'http://localhost:3000/players';
   
 
   constructor(private http: HttpClient) {}

@@ -15,6 +15,7 @@ export class AddplayerComponent {
     this.playerService.add(data).subscribe(
       (player) => {
         console.log('Player Added :'+player);
+        alert("player added successfully");
         
       },
      

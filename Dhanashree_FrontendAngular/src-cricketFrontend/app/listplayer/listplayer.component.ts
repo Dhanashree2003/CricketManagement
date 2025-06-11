@@ -25,5 +25,6 @@ export class ListplayerComponent implements OnInit {
   deletePlayer(playerId: number) {
     this.playerService.delete(playerId)
       .subscribe(() => this.getPlayers());
+      alert("player deleted");
   }
 }
