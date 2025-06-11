@@ -1,0 +1,25 @@
+<p>Welcome to home-page</p>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand">Cricket Team Manager</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/addplayer">Add Player</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/listplayer">View All</a>
+        </li>
+      </ul>
+      <form class="d-flex" #form="ngForm" (ngSubmit)="search(form)">
+        <input class="form-control" type="number" placeholder="Player ID" name="id" ngModel required>
+        <button class="btn btn-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

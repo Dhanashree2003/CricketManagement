@@ -1,0 +1,51 @@
+<p>updateplayer Here</p>
+
+<div class="container mt-4">
+  <h2>Update Player</h2>
+
+  <form #playerForm="ngForm" method="post" class="container col-md-6" (ngSubmit)="updatePlayer(playerForm.value)">
+  <!-- <form (ngSubmit)="updatePlayer()"> -->
+    <div class="mb-3">
+      <label for="playerId" class="form-label">Player ID</label>
+      <input type="number" class="form-control" id="playerId" [(ngModel)]="player.playerId" name="playerId" readonly>
+    </div>
+
+    <div class="mb-3">
+      <label for="playername" class="form-label">Player Name</label>
+      <input type="text" class="form-control" id="playername" [(ngModel)]="player.playername" name="playername" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="jerseynumber" class="form-label">Jersey Number</label>
+      <input type="number" class="form-control" id="jerseynumber" [(ngModel)]="player.jerseynumber" name="jerseynumber" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="role" class="form-label">Role</label>
+      <input type="text" class="form-control" id="role" [(ngModel)]="player.role" name="role" required>
+    </div>
+
+    <div class="mb-3">
+  <label>Total Matches</label>
+  <input type="number" class="form-control" [(ngModel)]="player.totalMatches" name="totalMatches" required>
+</div>
+
+<div class="mb-3">
+  <label>Team Name</label>
+  <input type="text" class="form-control" [(ngModel)]="player.teamName" name="teamName" required>
+</div>
+
+<div class="mb-3">
+  <label>Country</label>
+  <input type="text" class="form-control" [(ngModel)]="player.country" name="country" required>
+</div>
+
+<div class="mb-3">
+  <label>Description</label>
+  <textarea class="form-control" [(ngModel)]="player.description" name="description" required></textarea>
+</div>
+
+    <button type="submit" class="btn btn-primary">Update Player</button>
+  </form>
+</div>
+

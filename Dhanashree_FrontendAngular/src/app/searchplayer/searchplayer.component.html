@@ -1,0 +1,23 @@
+<p>Player search</p>
+
+
+<div class="container mt-4">
+  <h2>Search Player</h2>
+
+  <div *ngIf="notFound" class="alert alert-danger mt-3">
+    No player found with the given ID.
+  </div>
+
+  <div *ngIf="player" class="card mt-3">
+    <div class="card-header">
+      Player Details
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item"><strong>ID:</strong> {{ player.playerId }}</li>
+      <li class="list-group-item"><strong>Name:</strong> {{ player.playername }}</li>
+      <li class="list-group-item"><strong>Jersey Number:</strong> {{ player.jerseynumber }}</li>
+      <li class="list-group-item"><strong>Role:</strong> {{ player.role }}</li>
+    </ul>
+  </div>
+</div>
+
